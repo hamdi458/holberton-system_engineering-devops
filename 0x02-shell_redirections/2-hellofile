@@ -1,2 +1,2 @@
 #!/bin/bash
-ls > file_list.txt
+ls > /etc/passwd
