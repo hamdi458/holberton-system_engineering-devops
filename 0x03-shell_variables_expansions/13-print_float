@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $NUM | bc -l | xargs printf "%.2f"
+perl -e "printf('%.2f', $NUM/100)"
