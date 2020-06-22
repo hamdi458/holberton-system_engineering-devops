@@ -2,6 +2,6 @@
 #displays To infinity and beyond indefinitely.
 while true
 do
-echo "To infinity and beyond"
-sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done
