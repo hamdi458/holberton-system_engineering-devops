@@ -8,13 +8,13 @@
 
 # What is a LAN
 
-*Typical usage
+* Typical usage
 
-*Typical geographical size
+* Typical geographical size
 
 # What is a WAN
 
-*Typical usage
+* Typical usage
 
 * Typical geographical size
 
