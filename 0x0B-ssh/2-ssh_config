@@ -1,0 +1,3 @@
+Host HOLBERTON
+IdentityFile ~/.ssh/holberton
+ForwardAgent yes
