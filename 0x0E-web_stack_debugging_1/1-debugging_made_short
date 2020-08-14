@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script to start nginx without running status
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+sudo pkill -o nginx
