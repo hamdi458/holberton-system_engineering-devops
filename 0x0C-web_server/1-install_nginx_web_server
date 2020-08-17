@@ -1,9 +1,8 @@
-
 #!/usr/bin/env bash
-# install nginx on server
-sudo apt-get -y update
-sudo apt-get -y install nginx
+# install nginx
+
+apt-get -y update
+apt-get -y install nginx
 sudo chown -R $ubuntu:$ubuntu /var/www
-sudo chmod 666 /var/www/html/index.nginx-debian.html
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo service nginx start
+sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx restart
