@@ -8,10 +8,14 @@ subbdomain ()
     echo "$2 $out" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
 }
 
-for i in "www" "lb-01" "web-01" "web-02"
-do
-    if [ -z "$2" ] || [ "$i" == "$2" ] ;
-    then
-	    subbdomain "$1" "$i"
-    fi
-done
+
+if [ "$#" == 1 ]
+then
+    for i in "www" "lb-01" "web-01" "web-02"
+    do
+        subbdomain "$1" "$i"
+    done
+else
+    subbdomain "$1" "$2"
+fi
+
