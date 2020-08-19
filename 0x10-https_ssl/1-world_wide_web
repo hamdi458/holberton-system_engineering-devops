@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-#Bash script that will display information about subdomains
+# Wiw
+# Bash script that will display information about subdomains.
 
 subbdomain () 
 {
     out=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ') 
     echo "$2 $out" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
 }
+
 
 if [ "$#" == 1 ]
 then
