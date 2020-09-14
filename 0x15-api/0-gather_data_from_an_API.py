@@ -16,9 +16,11 @@ if __name__ == "__main__":
         if obj.get('userId') == id:
             s = s + 1
     r_tasks_t_f = requests.get(
-        "https://jsonplaceholder.typicode.com/todos?userId={}".format(id)).json()
+        "https://jsonplaceholder.typicode.com/todos?userId={}".
+        format(id)).json()
     print("Employee {} is done with tasks({}/{}):".format(r.get("name"),
-                                                          s, len(r_tasks_t_f)))
+                                                          s,
+                                                          len(r_tasks_t_f)))
     for obj in r_tasks:
         if obj.get('userId') == id:
             print("\t", obj.get("title"))
