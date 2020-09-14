@@ -5,19 +5,20 @@ import requests
 from sys import argv
 if __name__ == "__main__":
     id = int(argv[1])
-    response = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(id)).json()
-    response_tasks = requests.get(
+    r = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".
+        format(id)).json()
+    r_tasks = requests.get(
         "https://jsonplaceholder.typicode.com/todos?completed=true").json()
 
     s = 0
-    for obj in response_tasks:
+    for obj in r_tasks:
         if obj.get('userId') == id:
             s = s + 1
-    response_tasks_t_f = requests.get(
+    r_tasks_t_f = requests.get(
         "https://jsonplaceholder.typicode.com/todos?userId={}".format(id)).json()
-    print("Employee {} is done with tasks({}/{}):".format(response.get("name"),
-                                                          s, len(response_tasks_t_f)))
-    for obj in response_tasks:
+    print("Employee {} is done with tasks({}/{}):".format(r.get("name"),
+                                                          s, len(r_tasks_t_f)))
+    for obj in r_tasks:
         if obj.get('userId') == id:
-            print("\t",obj.get("title"))
+            print("\t", obj.get("title"))
