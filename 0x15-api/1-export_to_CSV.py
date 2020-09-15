@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """export data in the CSV format."""
+import csv
 import requests
 from sys import argv
-import csv
 if __name__ == "__main__":
     id = int(argv[1])
     response = requests.get(
