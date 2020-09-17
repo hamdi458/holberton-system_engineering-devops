@@ -15,8 +15,8 @@ def number_of_subscribers(subreddit):
         url,
         headers={
             'User-Agent': h + e},
-        allow_redirects=False).json()["data"]["subscribers"]
+        allow_redirects=False).json()
     try:
-        return (res)
+        return (res["data"]["subscribers"])
     except BaseException:
         return(0)
