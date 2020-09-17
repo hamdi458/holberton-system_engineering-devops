@@ -5,6 +5,7 @@ API
 
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=""):
     url = 'http://reddit.com/r/{}/hot.json'.format(subreddit)
     header = {'User-agent': 'hama_chrab'}
